@@ -2,7 +2,7 @@ import React from "react";
 import { renderHook, screen, act } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import "@testing-library/jest-dom/vitest";
-import { useCounter } from "./hooks/useCounter";
+import { useCounter } from "./useCounter";
 
 describe("useCounter", () => {
   it("initial value is 5", () => {
