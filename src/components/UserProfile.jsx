@@ -5,8 +5,8 @@ function UserProfile({ userId }) {
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-      .then((res) => res.json())
-      .then((data) => setUser(data));
+      .then(res => res.json())
+      .then(data => setUser(data));
   }, [userId]);
 
   if (!user) return <p>Loading...</p>;

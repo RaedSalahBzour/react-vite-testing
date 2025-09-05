@@ -1,18 +1,18 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Greeting from "./Greeting";
 import { describe, it, expect } from "vitest";
 import "@testing-library/jest-dom/vitest";
+import Greeting from "./Greeting";
 
 describe("Greeting", () => {
-  it("renders a default greeting", () => {
+  it("render default greeting", () => {
     render(<Greeting />);
-    expect(screen.getByText("Hello, World!")).toBeInTheDocument();
+    expect(screen.queryByText("Hello, World!")).toBeInTheDocument();
   });
 
-  it("renders greeting with a name", () => {
-    render(<Greeting name={"Pedro"} />);
-    const text = screen.getByText("Hello, Pedro!");
+  it("render greeting with a name", () => {
+    render(<Greeting name={"Raed"} />);
+    const text = screen.getByText("Hello, Raed!");
     expect(text).toBeInTheDocument();
   });
 });
